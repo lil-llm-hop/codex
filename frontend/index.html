@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Live Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Глобальный дашборд</h1>
+        <p class="subtitle">
+          Часовые пояса, курсы валют, криптовалюты и новости в одном месте.
+        </p>
+      </header>
+
+      <section class="card clocks">
+        <div class="card-header">
+          <h2>Текущее время по регионам</h2>
+        </div>
+        <ul id="timezone-list" class="timezone-list"></ul>
+      </section>
+
+      <section id="global-indicator" class="banner hidden" aria-live="polite"></section>
+      <section id="sources" class="sources" aria-live="polite"></section>
+    </main>
+
+    <template id="source-template">
+      <article class="card">
+        <div class="card-header">
+          <h2 class="source-name"></h2>
+          <span class="status-pill"></span>
+        </div>
+        <p class="updated-at"></p>
+        <div class="content"></div>
+      </article>
+    </template>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
