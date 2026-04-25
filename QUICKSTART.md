@@ -6,6 +6,6 @@
 4. Подожди 1–3 минуты, пока появится ссылка на сайт.
 5. Открой сайт по адресу:
 
-`https://<org-name>.github.io/<repo-name>/frontend/`
+`https://<org-name>.github.io/<repo-name>/`
 
-> Если нужна ссылка без `/frontend/`, перенеси `frontend/index.html` в корень репозитория.
+> Корневой `index.html` автоматически перенаправляет на `frontend/`.

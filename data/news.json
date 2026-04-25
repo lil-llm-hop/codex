@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-04-25T12:00:00Z",
+  "source": "NewsAPI + translation pipeline",
+  "status": "ok",
+  "errors": [],
+  "items": [
+    {
+      "region": "Северная Америка",
+      "title": "US inflation report signals cooling prices",
+      "title_ru": "Новый отчет по инфляции в США указывает на замедление роста цен",
+      "summary_ru": "Экономисты отмечают более мягкую динамику инфляции, что может повлиять на ожидания по ставке ФРС.",
+      "source_url": "https://example.com/north-america-story",
+      "published_at": "2026-04-25T10:20:00Z"
+    },
+    {
+      "region": "Европа",
+      "title": "EU energy ministers discuss grid resilience",
+      "title_ru": "Министры энергетики ЕС обсудили устойчивость энергосетей",
+      "summary_ru": "Основной акцент сделан на модернизации инфраструктуры и совместных инвестиционных механизмах.",
+      "source_url": "https://example.com/europe-story",
+      "published_at": "2026-04-25T09:45:00Z"
+    },
+    {
+      "region": "Азия",
+      "title": "Regional trade talks advance in Asia-Pacific",
+      "title_ru": "Переговоры по региональной торговле в Азиатско-Тихоокеанском регионе продвинулись",
+      "summary_ru": "Стороны сообщили о прогрессе по правилам цифровой торговли и упрощению логистических процедур.",
+      "source_url": "https://example.com/asia-story",
+      "published_at": "2026-04-25T08:30:00Z"
+    }
+  ]
+}

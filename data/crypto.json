@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-04-25T12:00:00Z",
+  "source": "CoinGecko",
+  "status": "ok",
+  "errors": [],
+  "items": [
+    { "title": "BTC/USD", "value": "68421" },
+    { "title": "ETH/USD", "value": "3290" },
+    { "title": "SOL/USD", "value": "168" }
+  ]
+}
