@@ -1,31 +1,32 @@
 {
+  "updated_at": "2026-04-25T12:00:00Z",
+  "source": "NewsAPI + translation pipeline",
+  "status": "ok",
+  "errors": [],
   "items": [
     {
-      "id": "eu-energy",
+      "region": "Северная Америка",
+      "title": "US inflation report signals cooling prices",
+      "title_ru": "Новый отчет по инфляции в США указывает на замедление роста цен",
+      "summary_ru": "Экономисты отмечают более мягкую динамику инфляции, что может повлиять на ожидания по ставке ФРС.",
+      "source_url": "https://example.com/north-america-story",
+      "published_at": "2026-04-25T10:20:00Z"
+    },
+    {
       "region": "Европа",
-      "title": "EU energy ministers discuss regional grid resilience",
-      "translatedRu": "Министры энергетики ЕС обсуждают устойчивость региональной энергосети.",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://www.reuters.com/",
-      "publishedAt": "2026-04-25T08:35:00Z"
+      "title": "EU energy ministers discuss grid resilience",
+      "title_ru": "Министры энергетики ЕС обсудили устойчивость энергосетей",
+      "summary_ru": "Основной акцент сделан на модернизации инфраструктуры и совместных инвестиционных механизмах.",
+      "source_url": "https://example.com/europe-story",
+      "published_at": "2026-04-25T09:45:00Z"
     },
     {
-      "id": "us-ai",
-      "region": "США",
-      "title": "US regulators unveil draft guidance for AI safety audits",
-      "translatedRu": "Регуляторы США представили проект рекомендаций по аудиту безопасности ИИ.",
-      "sourceName": "AP News",
-      "sourceUrl": "https://apnews.com/",
-      "publishedAt": "2026-04-25T09:10:00Z"
-    },
-    {
-      "id": "asia-trade",
       "region": "Азия",
-      "title": "Asian exporters report stronger logistics demand in Q2",
-      "translatedRu": "Азиатские экспортеры сообщают об усилении спроса на логистику во втором квартале.",
-      "sourceName": "Nikkei Asia",
-      "sourceUrl": "https://asia.nikkei.com/",
-      "publishedAt": "2026-04-25T10:05:00Z"
+      "title": "Regional trade talks advance in Asia-Pacific",
+      "title_ru": "Переговоры по региональной торговле в Азиатско-Тихоокеанском регионе продвинулись",
+      "summary_ru": "Стороны сообщили о прогрессе по правилам цифровой торговли и упрощению логистических процедур.",
+      "source_url": "https://example.com/asia-story",
+      "published_at": "2026-04-25T08:30:00Z"
     }
   ]
 }

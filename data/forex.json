@@ -1,28 +1,11 @@
 {
-  "pairs": [
-    {
-      "id": "usd-rub",
-      "base": "USD",
-      "quote": "RUB",
-      "value": 92.714,
-      "change24hPct": 0.43,
-      "updatedAt": "2026-04-25T11:00:00Z"
-    },
-    {
-      "id": "eur-rub",
-      "base": "EUR",
-      "quote": "RUB",
-      "value": 99.582,
-      "change24hPct": -0.12,
-      "updatedAt": "2026-04-25T11:00:00Z"
-    },
-    {
-      "id": "cny-rub",
-      "base": "CNY",
-      "quote": "RUB",
-      "value": 12.815,
-      "change24hPct": 0.08,
-      "updatedAt": "2026-04-25T11:00:00Z"
-    }
+  "updated_at": "2026-04-25T12:00:00Z",
+  "source": "exchangerate.host",
+  "status": "ok",
+  "errors": [],
+  "items": [
+    { "title": "USD/RUB", "value": "92.34" },
+    { "title": "EUR/RUB", "value": "104.08" },
+    { "title": "CNY/RUB", "value": "12.71" }
   ]
 }

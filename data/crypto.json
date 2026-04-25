@@ -1,28 +1,11 @@
 {
-  "assets": [
-    {
-      "id": "btc",
-      "symbol": "BTC",
-      "usd": 84210.42,
-      "rub": 7805190,
-      "change24hPct": 2.14,
-      "updatedAt": "2026-04-25T11:00:00Z"
-    },
-    {
-      "id": "eth",
-      "symbol": "ETH",
-      "usd": 4210.9,
-      "rub": 390400,
-      "change24hPct": -1.21,
-      "updatedAt": "2026-04-25T11:00:00Z"
-    },
-    {
-      "id": "sol",
-      "symbol": "SOL",
-      "usd": 185.37,
-      "rub": 17180,
-      "change24hPct": 0.77,
-      "updatedAt": "2026-04-25T11:00:00Z"
-    }
+  "updated_at": "2026-04-25T12:00:00Z",
+  "source": "CoinGecko",
+  "status": "ok",
+  "errors": [],
+  "items": [
+    { "title": "BTC/USD", "value": "68421" },
+    { "title": "ETH/USD", "value": "3290" },
+    { "title": "SOL/USD", "value": "168" }
   ]
 }
