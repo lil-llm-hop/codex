@@ -1,0 +1,10 @@
+{
+  "name": "codex-data-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:data": "node scripts/validate-data.mjs",
+    "precommit": "npm run validate:data"
+  }
+}
