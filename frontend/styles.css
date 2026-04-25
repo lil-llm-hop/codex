@@ -48,6 +48,16 @@ body {
   padding: 1rem;
 }
 
+.clocks {
+  margin: 1rem 0;
+}
+
+.timezone-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
 .card-header {
   display: flex;
   align-items: center;
@@ -89,6 +99,27 @@ body {
   border-radius: 8px;
   padding: 0.75rem;
   color: #cbd5e1;
+}
+
+.content ul {
+  padding-left: 1.25rem;
+}
+
+.content li {
+  margin: 0.35rem 0;
+}
+
+.content a {
+  color: #93c5fd;
+}
+
+.content a:hover {
+  color: #bfdbfe;
+}
+
+.news-meta {
+  opacity: 0.8;
+  font-size: 0.85rem;
 }
 
 .error-list {
