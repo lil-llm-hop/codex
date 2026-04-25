@@ -1,0 +1,9 @@
+{
+  "cities": [
+    { "id": "moscow", "city": "Москва", "timezone": "Europe/Moscow" },
+    { "id": "new-york", "city": "Нью-Йорк", "timezone": "America/New_York" },
+    { "id": "tokyo", "city": "Токио", "timezone": "Asia/Tokyo" },
+    { "id": "london", "city": "Лондон", "timezone": "Europe/London" },
+    { "id": "dubai", "city": "Дубай", "timezone": "Asia/Dubai" }
+  ]
+}
