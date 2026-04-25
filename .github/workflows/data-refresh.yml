@@ -1,0 +1,65 @@
+name: Data Refresh
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare data directory
+        run: mkdir -p data
+
+      - name: Fetch forex data
+        env:
+          OPENEXCHANGERATES_API_KEY: ${{ secrets.OPENEXCHANGERATES_API_KEY }}
+        run: |
+          curl --fail --silent --show-error \
+            "https://openexchangerates.org/api/latest.json?app_id=${OPENEXCHANGERATES_API_KEY}&base=USD&symbols=EUR,GBP,JPY,CHF,CAD,AUD" \
+            | jq --arg fetched_at "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+                '{fetched_at: $fetched_at, source: "openexchangerates", data: .}' \
+            > data/forex.json
+
+      - name: Fetch crypto data
+        env:
+          COINMARKETCAP_API_KEY: ${{ secrets.COINMARKETCAP_API_KEY }}
+        run: |
+          curl --fail --silent --show-error \
+            -H "X-CMC_PRO_API_KEY: ${COINMARKETCAP_API_KEY}" \
+            "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=BTC,ETH,SOL&convert=USD" \
+            | jq --arg fetched_at "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+                '{fetched_at: $fetched_at, source: "coinmarketcap", data: .}' \
+            > data/crypto.json
+
+      - name: Fetch news data
+        env:
+          NEWSAPI_API_KEY: ${{ secrets.NEWSAPI_API_KEY }}
+        run: |
+          curl --fail --silent --show-error \
+            "https://newsapi.org/v2/top-headlines?category=business&language=en&pageSize=20&apiKey=${NEWSAPI_API_KEY}" \
+            | jq --arg fetched_at "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+                '{fetched_at: $fetched_at, source: "newsapi", data: .}' \
+            > data/news.json
+
+      - name: Commit and push updated data
+        run: |
+          if git diff --quiet -- data/*.json; then
+            echo "No data changes detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json
+          git commit -m "chore(data): refresh forex, crypto, and news snapshots"
+          git push

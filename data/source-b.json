@@ -1,0 +1,9 @@
+{
+  "updated_at": "2026-04-25T00:00:00Z",
+  "source": "source-b",
+  "status": "degraded",
+  "errors": [
+    "API timeout for region eu-west-1"
+  ],
+  "items": []
+}
